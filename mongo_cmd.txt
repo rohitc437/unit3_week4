@@ -1,0 +1,1906 @@
+ show dbs
+admin          0.000GB
+config         0.000GB
+entertainment  0.000GB
+local          0.000GB
+web11          0.000GB
+> use entertainment
+switched to db entertainment
+> db.movies.find().pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518b"),
+        "id" : 1,
+        "movie_name" : "Nuns on the Run",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518c"),
+        "id" : 2,
+        "movie_name" : "Take This Waltz",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2007,
+        "budget" : 10516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518d"),
+        "id" : 3,
+        "movie_name" : "Broken Circle Breakdown, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19093
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518e"),
+        "id" : 4,
+        "movie_name" : "Happy Poet, The",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 18869
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518f"),
+        "id" : 5,
+        "movie_name" : "Casino Jack and the United States of Money",
+        "movie_genre" : "Documentary",
+        "production_year" : 2007,
+        "budget" : 16286
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5190"),
+        "id" : 6,
+        "movie_name" : "Stella: Live in Boston",
+        "movie_genre" : "Comedy",
+        "production_year" : 2004,
+        "budget" : 19048
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5191"),
+        "id" : 7,
+        "movie_name" : "The Land",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 19409
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5192"),
+        "id" : 8,
+        "movie_name" : "Intimate Enemies (L'ennemi intime)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2002,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5193"),
+        "id" : 9,
+        "movie_name" : "Trojan War",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 13837
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5194"),
+        "id" : 10,
+        "movie_name" : "Good Man, A (Un buen hombre)",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2007,
+        "budget" : 17604
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5195"),
+        "id" : 11,
+        "movie_name" : "Ninja Assassin",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 1996,
+        "budget" : 18922
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5196"),
+        "id" : 12,
+        "movie_name" : "Last Voyage, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 13325
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5197"),
+        "id" : 13,
+        "movie_name" : "Rain",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : 10564
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5198"),
+        "id" : 14,
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9047
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5199"),
+        "id" : 15,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 9661
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519a"),
+        "id" : 16,
+        "movie_name" : "Mummy, The",
+        "movie_genre" : "Horror|Romance",
+        "production_year" : 2001,
+        "budget" : 12386
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519b"),
+        "id" : 17,
+        "movie_name" : "War Game, The",
+        "movie_genre" : "Documentary|Drama|War",
+        "production_year" : 2017,
+        "budget" : 10551
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519c"),
+        "id" : 18,
+        "movie_name" : "Café de Flore",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 18601
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519d"),
+        "id" : 19,
+        "movie_name" : "Night Stalker, The",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1990,
+        "budget" : 11842
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519e"),
+        "id" : 20,
+        "movie_name" : "Broken Lullaby (a.k.a. The Man I Killed)",
+        "movie_genre" : "Drama",
+        "production_year" : 2007,
+        "budget" : 17171
+}
+Type "it" for more
+
+> db.movies.find({movie_name:{$eq:"War Game, The"}}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519b"),
+        "id" : 17,
+        "movie_name" : "War Game, The",
+        "movie_genre" : "Documentary|Drama|War",
+        "production_year" : 2017,
+        "budget" : 10551
+}
+> db.movies.find({movie_name:{$ne:"War Game, The"}}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518b"),
+        "id" : 1,
+        "movie_name" : "Nuns on the Run",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518c"),
+        "id" : 2,
+        "movie_name" : "Take This Waltz",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2007,
+        "budget" : 10516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518d"),
+        "id" : 3,
+        "movie_name" : "Broken Circle Breakdown, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19093
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518e"),
+        "id" : 4,
+        "movie_name" : "Happy Poet, The",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 18869
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518f"),
+        "id" : 5,
+        "movie_name" : "Casino Jack and the United States of Money",
+        "movie_genre" : "Documentary",
+        "production_year" : 2007,
+        "budget" : 16286
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5190"),
+        "id" : 6,
+        "movie_name" : "Stella: Live in Boston",
+        "movie_genre" : "Comedy",
+        "production_year" : 2004,
+        "budget" : 19048
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5191"),
+        "id" : 7,
+        "movie_name" : "The Land",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 19409
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5192"),
+        "id" : 8,
+        "movie_name" : "Intimate Enemies (L'ennemi intime)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2002,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5193"),
+        "id" : 9,
+        "movie_name" : "Trojan War",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 13837
+}
+
+> db.movies.find({budget:{$gte:10000}}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518b"),
+        "id" : 1,
+        "movie_name" : "Nuns on the Run",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518c"),
+        "id" : 2,
+        "movie_name" : "Take This Waltz",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2007,
+        "budget" : 10516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518d"),
+        "id" : 3,
+        "movie_name" : "Broken Circle Breakdown, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19093
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518e"),
+        "id" : 4,
+        "movie_name" : "Happy Poet, The",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 18869
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518f"),
+        "id" : 5,
+        "movie_name" : "Casino Jack and the United States of Money",
+        "movie_genre" : "Documentary",
+        "production_year" : 2007,
+        "budget" : 16286
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5190"),
+        "id" : 6,
+        "movie_name" : "Stella: Live in Boston",
+        "movie_genre" : "Comedy",
+        "production_year" : 2004,
+        "budget" : 19048
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5191"),
+        "id" : 7,
+        "movie_name" : "The Land",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 19409
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5193"),
+        "id" : 9,
+        "movie_name" : "Trojan War",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 13837
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5194"),
+        "id" : 10,
+        "movie_name" : "Good Man, A (Un buen hombre)",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2007,
+        "budget" : 17604
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5195"),
+        "id" : 11,
+        "movie_name" : "Ninja Assassin",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 1996,
+        "budget" : 18922
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5196"),
+        "id" : 12,
+        "movie_name" : "Last Voyage, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 13325
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5197"),
+        "id" : 13,
+        "movie_name" : "Rain",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : 10564
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519a"),
+        "id" : 16,
+        "movie_name" : "Mummy, The",
+        "movie_genre" : "Horror|Romance",
+        "production_year" : 2001,
+        "budget" : 12386
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519b"),
+        "id" : 17,
+        "movie_name" : "War Game, The",
+        "movie_genre" : "Documentary|Drama|War",
+        "production_year" : 2017,
+        "budget" : 10551
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519c"),
+        "id" : 18,
+        "movie_name" : "Café de Flore",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 18601
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519d"),
+        "id" : 19,
+        "movie_name" : "Night Stalker, The",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1990,
+        "budget" : 11842
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519e"),
+        "id" : 20,
+        "movie_name" : "Broken Lullaby (a.k.a. The Man I Killed)",
+        "movie_genre" : "Drama",
+        "production_year" : 2007,
+        "budget" : 17171
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519f"),
+        "id" : 21,
+        "movie_name" : "Super Cops, The",
+        "movie_genre" : "Action|Comedy|Crime|Drama|Thriller",
+        "production_year" : 2008,
+        "budget" : 17842
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a0"),
+        "id" : 22,
+        "movie_name" : "Elevator to the Gallows (a.k.a. Frantic) (Ascenseur pour l'échafaud)",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1993,
+        "budget" : 11913
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a1"),
+        "id" : 23,
+        "movie_name" : "Bread and Roses",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 13181
+}
+> db.movies.find({budget:{$lte:10000}}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5192"),
+        "id" : 8,
+        "movie_name" : "Intimate Enemies (L'ennemi intime)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2002,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5198"),
+        "id" : 14,
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9047
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5199"),
+        "id" : 15,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 9661
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a4"),
+        "id" : 26,
+        "movie_name" : "Blonde Venus",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 9023
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a7"),
+        "id" : 29,
+        "movie_name" : "Fixed Bayonets!",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2014,
+        "budget" : 9096
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a8"),
+        "id" : 30,
+        "movie_name" : "MC5*: A True Testimonial",
+        "movie_genre" : "Documentary",
+        "production_year" : 1995,
+        "budget" : 9025
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51bf"),
+        "id" : 53,
+        "movie_name" : "Flipped",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9950
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51d7"),
+        "id" : 77,
+        "movie_name" : "Eureka (Yurîka)",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : 9769
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51df"),
+        "id" : 85,
+        "movie_name" : "In Old Arizona",
+        "movie_genre" : "Romance|Western",
+        "production_year" : 1996,
+        "budget" : 9057
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51e7"),
+        "id" : 93,
+        "movie_name" : "Batman/Superman Movie, The",
+        "movie_genre" : "Action|Adventure|Animation|Children|Fantasy|Sci-Fi",
+        "production_year" : 2011,
+        "budget" : 9035
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51f6"),
+        "id" : 108,
+        "movie_name" : "Raisin in the Sun, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 9317
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5210"),
+        "id" : 134,
+        "movie_name" : "Woman of Paris, A",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : 9352
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5216"),
+        "id" : 140,
+        "movie_name" : "Killing Me Softly",
+        "movie_genre" : "Drama|Mystery|Romance|Thriller",
+        "production_year" : 2006,
+        "budget" : 9756
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5224"),
+        "id" : 154,
+        "movie_name" : "Imagine Me & You",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 9210
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5225"),
+        "id" : 155,
+        "movie_name" : "Disconnect",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : 9341
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5238"),
+        "id" : 174,
+        "movie_name" : "One Sunday Afternoon",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2017,
+        "budget" : 9794
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5248"),
+        "id" : 190,
+        "movie_name" : "Blood and Sand",
+        "movie_genre" : "Drama",
+        "production_year" : 2018,
+        "budget" : 9516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a524d"),
+        "id" : 195,
+        "movie_name" : "Mr. Saturday Night",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1993,
+        "budget" : 9818
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a524e"),
+        "id" : 196,
+        "movie_name" : "Print the Legend",
+        "movie_genre" : "Documentary",
+        "production_year" : 1999,
+        "budget" : 9454
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a525c"),
+        "id" : 210,
+        "movie_name" : "Hatchet for the Honeymoon (Rosso segno della follia, Il)",
+        "movie_genre" : "Fantasy|Horror|Thriller",
+        "production_year" : 2015,
+        "budget" : 9902
+}
+
+> db.movies.find({$and:[{budget:{$lt:10000}},{budget:{$lte:15000}}]}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5192"),
+        "id" : 8,
+        "movie_name" : "Intimate Enemies (L'ennemi intime)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2002,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5198"),
+        "id" : 14,
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9047
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5199"),
+        "id" : 15,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 9661
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a4"),
+        "id" : 26,
+        "movie_name" : "Blonde Venus",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 9023
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a7"),
+        "id" : 29,
+        "movie_name" : "Fixed Bayonets!",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2014,
+        "budget" : 9096
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a8"),
+        "id" : 30,
+        "movie_name" : "MC5*: A True Testimonial",
+        "movie_genre" : "Documentary",
+        "production_year" : 1995,
+        "budget" : 9025
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51bf"),
+        "id" : 53,
+        "movie_name" : "Flipped",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9950
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51d7"),
+        "id" : 77,
+        "movie_name" : "Eureka (Yurîka)",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : 9769
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51df"),
+        "id" : 85,
+        "movie_name" : "In Old Arizona",
+        "movie_genre" : "Romance|Western",
+        "production_year" : 1996,
+        "budget" : 9057
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51e7"),
+        "id" : 93,
+        "movie_name" : "Batman/Superman Movie, The",
+        "movie_genre" : "Action|Adventure|Animation|Children|Fantasy|Sci-Fi",
+        "production_year" : 2011,
+        "budget" : 9035
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51f6"),
+        "id" : 108,
+        "movie_name" : "Raisin in the Sun, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 9317
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5210"),
+        "id" : 134,
+        "movie_name" : "Woman of Paris, A",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : 9352
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5216"),
+        "id" : 140,
+        "movie_name" : "Killing Me Softly",
+        "movie_genre" : "Drama|Mystery|Romance|Thriller",
+        "production_year" : 2006,
+        "budget" : 9756
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5224"),
+        "id" : 154,
+        "movie_name" : "Imagine Me & You",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 9210
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5225"),
+        "id" : 155,
+        "movie_name" : "Disconnect",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : 9341
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5238"),
+        "id" : 174,
+        "movie_name" : "One Sunday Afternoon",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2017,
+        "budget" : 9794
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5248"),
+        "id" : 190,
+        "movie_name" : "Blood and Sand",
+        "movie_genre" : "Drama",
+        "production_year" : 2018,
+        "budget" : 9516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a524d"),
+        "id" : 195,
+        "movie_name" : "Mr. Saturday Night",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1993,
+        "budget" : 9818
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a524e"),
+        "id" : 196,
+        "movie_name" : "Print the Legend",
+        "movie_genre" : "Documentary",
+        "production_year" : 1999,
+        "budget" : 9454
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a525c"),
+        "id" : 210,
+        "movie_name" : "Hatchet for the Honeymoon (Rosso segno della follia, Il)",
+        "movie_genre" : "Fantasy|Horror|Thriller",
+        "production_year" : 2015,
+        "budget" : 9902
+}
+
+> db.movies.find({$and:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518b"),
+        "id" : 1,
+        "movie_name" : "Nuns on the Run",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518c"),
+        "id" : 2,
+        "movie_name" : "Take This Waltz",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2007,
+        "budget" : 10516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518d"),
+        "id" : 3,
+        "movie_name" : "Broken Circle Breakdown, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19093
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518e"),
+        "id" : 4,
+        "movie_name" : "Happy Poet, The",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 18869
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518f"),
+        "id" : 5,
+        "movie_name" : "Casino Jack and the United States of Money",
+        "movie_genre" : "Documentary",
+        "production_year" : 2007,
+        "budget" : 16286
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5190"),
+        "id" : 6,
+        "movie_name" : "Stella: Live in Boston",
+        "movie_genre" : "Comedy",
+        "production_year" : 2004,
+        "budget" : 19048
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5191"),
+        "id" : 7,
+        "movie_name" : "The Land",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 19409
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5194"),
+        "id" : 10,
+        "movie_name" : "Good Man, A (Un buen hombre)",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2007,
+        "budget" : 17604
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5196"),
+        "id" : 12,
+        "movie_name" : "Last Voyage, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 13325
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519a"),
+        "id" : 16,
+        "movie_name" : "Mummy, The",
+        "movie_genre" : "Horror|Romance",
+        "production_year" : 2001,
+        "budget" : 12386
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519b"),
+        "id" : 17,
+        "movie_name" : "War Game, The",
+        "movie_genre" : "Documentary|Drama|War",
+        "production_year" : 2017,
+        "budget" : 10551
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519c"),
+        "id" : 18,
+        "movie_name" : "Café de Flore",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 18601
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519e"),
+        "id" : 20,
+        "movie_name" : "Broken Lullaby (a.k.a. The Man I Killed)",
+        "movie_genre" : "Drama",
+        "production_year" : 2007,
+        "budget" : 17171
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519f"),
+        "id" : 21,
+        "movie_name" : "Super Cops, The",
+        "movie_genre" : "Action|Comedy|Crime|Drama|Thriller",
+        "production_year" : 2008,
+        "budget" : 17842
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a1"),
+        "id" : 23,
+        "movie_name" : "Bread and Roses",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 13181
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a6"),
+        "id" : 28,
+        "movie_name" : "Mad Bastards",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 12034
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51aa"),
+        "id" : 32,
+        "movie_name" : "Looking for Mr. Goodbar",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 16295
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51ab"),
+        "id" : 33,
+        "movie_name" : "Treasure Island",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2014,
+        "budget" : 16090
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51ae"),
+        "id" : 36,
+        "movie_name" : "Bloody Murder 2: Closing Camp",
+        "movie_genre" : "Drama|Horror|Mystery|Thriller",
+        "production_year" : 2006,
+        "budget" : 15840
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51b0"),
+        "id" : 38,
+        "movie_name" : "Prey for Rock & Roll",
+        "movie_genre" : "Drama|Musical",
+        "production_year" : 2010,
+        "budget" : 18747
+}
+Type "it" for more
+> db.movies.find({$or:[{budget:{$lt:10000}},{budget:{$lte:15000}}]}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518b"),
+        "id" : 1,
+        "movie_name" : "Nuns on the Run",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518c"),
+        "id" : 2,
+        "movie_name" : "Take This Waltz",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2007,
+        "budget" : 10516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5192"),
+        "id" : 8,
+        "movie_name" : "Intimate Enemies (L'ennemi intime)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2002,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5193"),
+        "id" : 9,
+        "movie_name" : "Trojan War",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 13837
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5196"),
+        "id" : 12,
+        "movie_name" : "Last Voyage, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 13325
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5197"),
+        "id" : 13,
+        "movie_name" : "Rain",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : 10564
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5198"),
+        "id" : 14,
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9047
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5199"),
+        "id" : 15,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 9661
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519a"),
+        "id" : 16,
+        "movie_name" : "Mummy, The",
+        "movie_genre" : "Horror|Romance",
+        "production_year" : 2001,
+        "budget" : 12386
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519b"),
+        "id" : 17,
+        "movie_name" : "War Game, The",
+        "movie_genre" : "Documentary|Drama|War",
+        "production_year" : 2017,
+        "budget" : 10551
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519d"),
+        "id" : 19,
+        "movie_name" : "Night Stalker, The",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1990,
+        "budget" : 11842
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a0"),
+        "id" : 22,
+        "movie_name" : "Elevator to the Gallows (a.k.a. Frantic) (Ascenseur pour l'échafaud)",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1993,
+        "budget" : 11913
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a1"),
+        "id" : 23,
+        "movie_name" : "Bread and Roses",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 13181
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a3"),
+        "id" : 25,
+        "movie_name" : "Sleeping Beauty, The (La belle endormie)",
+        "movie_genre" : "Drama",
+        "production_year" : 1998,
+        "budget" : 11319
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a4"),
+        "id" : 26,
+        "movie_name" : "Blonde Venus",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 9023
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a6"),
+        "id" : 28,
+        "movie_name" : "Mad Bastards",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 12034
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a7"),
+        "id" : 29,
+        "movie_name" : "Fixed Bayonets!",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2014,
+        "budget" : 9096
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a8"),
+        "id" : 30,
+        "movie_name" : "MC5*: A True Testimonial",
+        "movie_genre" : "Documentary",
+        "production_year" : 1995,
+        "budget" : 9025
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51af"),
+        "id" : 37,
+        "movie_name" : "10,000 BC",
+        "movie_genre" : "Adventure|Romance|Thriller",
+        "production_year" : 1997,
+        "budget" : 13522
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51b1"),
+        "id" : 39,
+        "movie_name" : "Where the Red Fern Grows",
+        "movie_genre" : "Children|Drama",
+        "production_year" : 1995,
+        "budget" : 11268
+}
+Type "it" for more
+>
+> db.movies.find({$nor:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5198"),
+        "id" : 14,
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9047
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5199"),
+        "id" : 15,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 9661
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a8"),
+        "id" : 30,
+        "movie_name" : "MC5*: A True Testimonial",
+        "movie_genre" : "Documentary",
+        "production_year" : 1995,
+        "budget" : 9025
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51bf"),
+        "id" : 53,
+        "movie_name" : "Flipped",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9950
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51d7"),
+        "id" : 77,
+        "movie_name" : "Eureka (Yurîka)",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : 9769
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51df"),
+        "id" : 85,
+        "movie_name" : "In Old Arizona",
+        "movie_genre" : "Romance|Western",
+        "production_year" : 1996,
+        "budget" : 9057
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5210"),
+        "id" : 134,
+        "movie_name" : "Woman of Paris, A",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : 9352
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a524d"),
+        "id" : 195,
+        "movie_name" : "Mr. Saturday Night",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1993,
+        "budget" : 9818
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a524e"),
+        "id" : 196,
+        "movie_name" : "Print the Legend",
+        "movie_genre" : "Documentary",
+        "production_year" : 1999,
+        "budget" : 9454
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5298"),
+        "id" : 270,
+        "movie_name" : "Fine-Tune",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1990,
+        "budget" : 9940
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a52b1"),
+        "id" : 295,
+        "movie_name" : "Ghost Story",
+        "movie_genre" : "Drama|Horror",
+        "production_year" : 1990,
+        "budget" : 9959
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a52b2"),
+        "id" : 296,
+        "movie_name" : "The Elephant Man",
+        "movie_genre" : "Drama",
+        "production_year" : 1993,
+        "budget" : 9201
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a52c0"),
+        "id" : 310,
+        "movie_name" : "Goke, Body Snatcher from Hell (Kyuketsuki Gokemidoro)",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 1996,
+        "budget" : 9522
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a531b"),
+        "id" : 401,
+        "movie_name" : "Nobody Knows Anything!",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 9108
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5337"),
+        "id" : 429,
+        "movie_name" : "Crashing",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 9034
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5349"),
+        "id" : 447,
+        "movie_name" : "Escape from Dartmoor",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2000,
+        "budget" : 9289
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5355"),
+        "id" : 459,
+        "movie_name" : "Beware the Moon: Remembering 'An American Werewolf in London'",
+        "movie_genre" : "Documentary",
+        "production_year" : 1992,
+        "budget" : 9010
+}
+
+
+
+> db.movies.find({$or:[{production_year:{$not:{$gt:2000}}},{budget:{$not:{$gt:10000}}}]}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5192"),
+        "id" : 8,
+        "movie_name" : "Intimate Enemies (L'ennemi intime)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2002,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5193"),
+        "id" : 9,
+        "movie_name" : "Trojan War",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 13837
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5195"),
+        "id" : 11,
+        "movie_name" : "Ninja Assassin",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 1996,
+        "budget" : 18922
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5197"),
+        "id" : 13,
+        "movie_name" : "Rain",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : 10564
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5198"),
+        "id" : 14,
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9047
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5199"),
+        "id" : 15,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 9661
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519d"),
+        "id" : 19,
+        "movie_name" : "Night Stalker, The",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1990,
+        "budget" : 11842
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a0"),
+        "id" : 22,
+        "movie_name" : "Elevator to the Gallows (a.k.a. Frantic) (Ascenseur pour l'échafaud)",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1993,
+        "budget" : 11913
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a2"),
+        "id" : 24,
+        "movie_name" : "Yatterman (Yattâman)",
+        "movie_genre" : "Action|Comedy|Fantasy",
+        "production_year" : 2000,
+        "budget" : 15397
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a3"),
+        "id" : 25,
+        "movie_name" : "Sleeping Beauty, The (La belle endormie)",
+        "movie_genre" : "Drama",
+        "production_year" : 1998,
+        "budget" : 11319
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a4"),
+        "id" : 26,
+        "movie_name" : "Blonde Venus",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 9023
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a5"),
+        "id" : 27,
+        "movie_name" : "Producers, The",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 1993,
+        "budget" : 17645
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a7"),
+        "id" : 29,
+        "movie_name" : "Fixed Bayonets!",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2014,
+        "budget" : 9096
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a8"),
+        "id" : 30,
+        "movie_name" : "MC5*: A True Testimonial",
+        "movie_genre" : "Documentary",
+        "production_year" : 1995,
+        "budget" : 9025
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a9"),
+        "id" : 31,
+        "movie_name" : "Bread and Chocolate (Pane e cioccolata)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1993,
+        "budget" : 19442
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51ac"),
+        "id" : 34,
+        "movie_name" : "Jerk Theory, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 1993,
+        "budget" : 19626
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51ad"),
+        "id" : 35,
+        "movie_name" : "One Spy Too Many",
+        "movie_genre" : "Adventure|Crime",
+        "production_year" : 1997,
+        "budget" : 17545
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51af"),
+        "id" : 37,
+        "movie_name" : "10,000 BC",
+        "movie_genre" : "Adventure|Romance|Thriller",
+        "production_year" : 1997,
+        "budget" : 13522
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51b1"),
+        "id" : 39,
+        "movie_name" : "Where the Red Fern Grows",
+        "movie_genre" : "Children|Drama",
+        "production_year" : 1995,
+        "budget" : 11268
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51b2"),
+        "id" : 40,
+        "movie_name" : "Diva",
+        "movie_genre" : "Action|Drama|Mystery|Romance|Thriller",
+        "production_year" : 1992,
+        "budget" : 13927
+}
+
+
+
+> db.movies.find( { $nor: [ { production_year: 2000 }, { budget: 10000 } ]  } ).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518b"),
+        "id" : 1,
+        "movie_name" : "Nuns on the Run",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2011,
+        "budget" : 10014
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518c"),
+        "id" : 2,
+        "movie_name" : "Take This Waltz",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2007,
+        "budget" : 10516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518d"),
+        "id" : 3,
+        "movie_name" : "Broken Circle Breakdown, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19093
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518e"),
+        "id" : 4,
+        "movie_name" : "Happy Poet, The",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 18869
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a518f"),
+        "id" : 5,
+        "movie_name" : "Casino Jack and the United States of Money",
+        "movie_genre" : "Documentary",
+        "production_year" : 2007,
+        "budget" : 16286
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5190"),
+        "id" : 6,
+        "movie_name" : "Stella: Live in Boston",
+        "movie_genre" : "Comedy",
+        "production_year" : 2004,
+        "budget" : 19048
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5191"),
+        "id" : 7,
+        "movie_name" : "The Land",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 19409
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5192"),
+        "id" : 8,
+        "movie_name" : "Intimate Enemies (L'ennemi intime)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2002,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5193"),
+        "id" : 9,
+        "movie_name" : "Trojan War",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 13837
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5194"),
+        "id" : 10,
+        "movie_name" : "Good Man, A (Un buen hombre)",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2007,
+        "budget" : 17604
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5195"),
+        "id" : 11,
+        "movie_name" : "Ninja Assassin",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 1996,
+        "budget" : 18922
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5196"),
+        "id" : 12,
+        "movie_name" : "Last Voyage, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 13325
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5197"),
+        "id" : 13,
+        "movie_name" : "Rain",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : 10564
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5198"),
+        "id" : 14,
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9047
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5199"),
+        "id" : 15,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 9661
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519a"),
+        "id" : 16,
+        "movie_name" : "Mummy, The",
+        "movie_genre" : "Horror|Romance",
+        "production_year" : 2001,
+        "budget" : 12386
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519b"),
+        "id" : 17,
+        "movie_name" : "War Game, The",
+        "movie_genre" : "Documentary|Drama|War",
+        "production_year" : 2017,
+        "budget" : 10551
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519c"),
+        "id" : 18,
+        "movie_name" : "Café de Flore",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 18601
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519d"),
+        "id" : 19,
+        "movie_name" : "Night Stalker, The",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1990,
+        "budget" : 11842
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a519e"),
+        "id" : 20,
+        "movie_name" : "Broken Lullaby (a.k.a. The Man I Killed)",
+        "movie_genre" : "Drama",
+        "production_year" : 2007,
+        "budget" : 17171
+}
+Type "it" for more
+
+
+>
+
+> db.movies.find({$and:[{production_year:{$gte:2000}},{budget:{$lte:10000}}]}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5192"),
+        "id" : 8,
+        "movie_name" : "Intimate Enemies (L'ennemi intime)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2002,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a4"),
+        "id" : 26,
+        "movie_name" : "Blonde Venus",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : 9023
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a7"),
+        "id" : 29,
+        "movie_name" : "Fixed Bayonets!",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2014,
+        "budget" : 9096
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51d7"),
+        "id" : 77,
+        "movie_name" : "Eureka (Yurîka)",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : 9769
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51e7"),
+        "id" : 93,
+        "movie_name" : "Batman/Superman Movie, The",
+        "movie_genre" : "Action|Adventure|Animation|Children|Fantasy|Sci-Fi",
+        "production_year" : 2011,
+        "budget" : 9035
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51f6"),
+        "id" : 108,
+        "movie_name" : "Raisin in the Sun, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 9317
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5216"),
+        "id" : 140,
+        "movie_name" : "Killing Me Softly",
+        "movie_genre" : "Drama|Mystery|Romance|Thriller",
+        "production_year" : 2006,
+        "budget" : 9756
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5224"),
+        "id" : 154,
+        "movie_name" : "Imagine Me & You",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 9210
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5225"),
+        "id" : 155,
+        "movie_name" : "Disconnect",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 2003,
+        "budget" : 9341
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5238"),
+        "id" : 174,
+        "movie_name" : "One Sunday Afternoon",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2017,
+        "budget" : 9794
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5248"),
+        "id" : 190,
+        "movie_name" : "Blood and Sand",
+        "movie_genre" : "Drama",
+        "production_year" : 2018,
+        "budget" : 9516
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a525c"),
+        "id" : 210,
+        "movie_name" : "Hatchet for the Honeymoon (Rosso segno della follia, Il)",
+        "movie_genre" : "Fantasy|Horror|Thriller",
+        "production_year" : 2015,
+        "budget" : 9902
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5276"),
+        "id" : 236,
+        "movie_name" : "Moliere",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 9878
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a527f"),
+        "id" : 245,
+        "movie_name" : "Henry Kissinger: Secrets of a Superpower (Henry Kissinger - Geheimnisse einer Supermacht)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2005,
+        "budget" : 9080
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5287"),
+        "id" : 253,
+        "movie_name" : "Secret of NIMH, The",
+        "movie_genre" : "Adventure|Animation|Children|Drama",
+        "production_year" : 2001,
+        "budget" : 9312
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5296"),
+        "id" : 268,
+        "movie_name" : "Angels' Share, The",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 9121
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a52b5"),
+        "id" : 299,
+        "movie_name" : "Griff the Invisible",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2007,
+        "budget" : 9195
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a52b8"),
+        "id" : 302,
+        "movie_name" : "102 Dalmatians",
+        "movie_genre" : "Children|Comedy",
+        "production_year" : 2017,
+        "budget" : 9518
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a52bf"),
+        "id" : 309,
+        "movie_name" : "Only Angels Have Wings",
+        "movie_genre" : "Adventure|Drama|Romance",
+        "production_year" : 2008,
+        "budget" : 9033
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a52e8"),
+        "id" : 350,
+        "movie_name" : "Night Shift",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 9758
+}
+Type "it" for more
+>
+
+
+
+> db.movies.find().sort({movie_name:-1}).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5212"),
+        "id" : 136,
+        "movie_name" : "Zebraman",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 13685
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5365"),
+        "id" : 475,
+        "movie_name" : "Zatoichi",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2011,
+        "budget" : 10864
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a529c"),
+        "id" : 274,
+        "movie_name" : "Young Guns",
+        "movie_genre" : "Action|Comedy|Western",
+        "production_year" : 2018,
+        "budget" : 10576
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51a2"),
+        "id" : 24,
+        "movie_name" : "Yatterman (Yattâman)",
+        "movie_genre" : "Action|Comedy|Fantasy",
+        "production_year" : 2000,
+        "budget" : 15397
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a522c"),
+        "id" : 162,
+        "movie_name" : "Yatterman (Yattâman)",
+        "movie_genre" : "Action|Comedy|Fantasy",
+        "production_year" : 2000,
+        "budget" : 13662
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a537c"),
+        "id" : 498,
+        "movie_name" : "Yatterman (Yattâman)",
+        "movie_genre" : "Action|Comedy|Fantasy",
+        "production_year" : 2009,
+        "budget" : 19020
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5218"),
+        "id" : 142,
+        "movie_name" : "Yankee Zulu",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 13945
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51c0"),
+        "id" : 54,
+        "movie_name" : "World's Greatest Lover, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 1995,
+        "budget" : 13737
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5210"),
+        "id" : 134,
+        "movie_name" : "Woman of Paris, A",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : 9352
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a531a"),
+        "id" : 400,
+        "movie_name" : "Witnesses, The (Les témoins)",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 17156
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51ec"),
+        "id" : 98,
+        "movie_name" : "Wisdom of Crocodiles, The (a.k.a. Immortality)",
+        "movie_genre" : "Romance|Thriller",
+        "production_year" : 2013,
+        "budget" : 10429
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a527d"),
+        "id" : 243,
+        "movie_name" : "Winner, The",
+        "movie_genre" : "Comedy|Crime|Thriller",
+        "production_year" : 2008,
+        "budget" : 18558
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a527a"),
+        "id" : 240,
+        "movie_name" : "Will",
+        "movie_genre" : "Children|Drama",
+        "production_year" : 2014,
+        "budget" : 12808
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5266"),
+        "id" : 220,
+        "movie_name" : "Whole",
+        "movie_genre" : "Documentary",
+        "production_year" : 2007,
+        "budget" : 16677
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a52c1"),
+        "id" : 311,
+        "movie_name" : "White Sheik, The (Sceicco bianco, Lo)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2008,
+        "budget" : 11163
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5290"),
+        "id" : 262,
+        "movie_name" : "White Palace",
+        "movie_genre" : "Drama",
+        "production_year" : 2014,
+        "budget" : 10885
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a530a"),
+        "id" : 384,
+        "movie_name" : "White Oleander",
+        "movie_genre" : "Drama",
+        "production_year" : 2015,
+        "budget" : 16042
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51d8"),
+        "id" : 78,
+        "movie_name" : "White Man's Burden",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 16691
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51d5"),
+        "id" : 75,
+        "movie_name" : "Whisper",
+        "movie_genre" : "Crime|Drama|Horror|Thriller",
+        "production_year" : 2015,
+        "budget" : 18480
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a51b1"),
+        "id" : 39,
+        "movie_name" : "Where the Red Fern Grows",
+        "movie_genre" : "Children|Drama",
+        "production_year" : 1995,
+        "budget" : 11268
+}
+Type "it" for more
+>
+
+
+> db.movies.find().skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5195"),
+        "id" : 11,
+        "movie_name" : "Ninja Assassin",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 1996,
+        "budget" : 18922
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5196"),
+        "id" : 12,
+        "movie_name" : "Last Voyage, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 13325
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5197"),
+        "id" : 13,
+        "movie_name" : "Rain",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1993,
+        "budget" : 10564
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5198"),
+        "id" : 14,
+        "movie_name" : "Lonely Wife, The (Charulata)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 9047
+}
+{
+        "_id" : ObjectId("614b5fd18eb12fe3585a5199"),
+        "id" : 15,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : 9661
+}
